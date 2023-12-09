@@ -1,4 +1,6 @@
-# OS-Project
+![Imgur](https://imgur.com/z4a1Nic.jpg)
+# Multi-threaded Web Crawler 
+*🕷️ Welcome to the core of our OS-Project! Our multi-threaded web crawler is meticulously designed for optimal efficiency, dedicated to the seamless extraction of data from The Weather Network – your ultimate destination for weather-related insights. 🌦️*
 
 ## Description
 Currently, the crawler is able to take a query as parameter and search https://amazon.com for search results and product details. The crawler is able to extract the following information from the search results and product details pages:
@@ -8,8 +10,11 @@ Currently, the crawler is able to take a query as parameter and search https://a
 - Product rating
 
 ## Requirements
-Beyond the requirements in `requirements.txt`, you will need to install RabbitMQ as a message broker.
-Go to this link to download and install RabbitMQ: https://www.rabbitmq.com/download.html
+ In the toolkit of OS-Project, there are a few must-haves to keep things running smoothly. Beyond the requirements outlined in `requirements.txt`, you will need to install RabbitMQ as a message broker.
+ 
+ 🐇 **How to get RabbitMQ on your side:**
+  1. Visit [RabbitMQ Download](https://www.rabbitmq.com/download.html)
+  2. Follow the simple installation steps.
 
 ## Key commands
 
@@ -34,9 +39,18 @@ celery --broker=amqp://guest:guest@localhost:5672// flower
 ```
 Then, go to http://localhost:5555 to view the flower dashboard.
 
-### To run the crawler
-Go to http://localhost:8000/docs and click on the `/async/scrape/amazon/{query}` endpoint. 
-Then, click on the `Try it out` button and enter a query in the `query` field. Click on the `Execute` button to start the crawler.
-As the crawler runs, you can go to http://localhost:5555 to view the flower dashboard and monitor the progress of the crawler and see results.
+### Run the crawler
 
-If you would like to run the crawler without using celery workers (without concurrency), you can use the `/scrape/amazon/{query}` endpoint instead.
+🏃‍♀️ Ready to set the crawler in motion? Follow these simple steps:
+
+1.  🚀 Head to [http://localhost:8000/docs](http://localhost:8000/docs).
+2.  🎯 Click on the `/async/scrape/amazon/{query}` endpoint.
+3.  🧐 Hit the `Try it out` button.
+4.  📝 Enter your query in the `query` field.
+5.  🚀 Click `Execute` to unleash the crawler.
+
+🌼 As the crawler runs, you can go to http://localhost:5555 to view the flower dashboard and monitor the progress of the crawler and see results.
+
+👷‍♂️ If you would like to run the crawler without using celery workers (without concurrency), you can use the `/scrape/amazon/{query}` endpoint instead.
+
+Adventure awaits! Let the crawling commence! 🌐✨
